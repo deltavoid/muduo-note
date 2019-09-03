@@ -1,0 +1,66 @@
+
+
+
+muduo
+
+
+    项目结构
+
+    Reactor
+
+
+关键类
+
+    Buffer
+
+    EventLoop
+
+    TcpConnection
+
+    TcpServer
+
+    TcpClient
+
+
+Reactor
+
+    EventLoop
+
+        Poller    Channel
+    
+
+    EventLoop
+
+        common Poll fd
+
+        timerfd (belong to the EventLoop)
+
+        PendingFunctors with wakeup fd and wakeup channel (belong to the EventLoop, and visuable by other thread)
+
+
+
+
+3 classic examples of network programming
+
+    echo 
+
+    sudoko  (echo + backend task processing)
+
+    chatting ( mutli IO interacting)
+
+
+
+process, thread, coroutine, object
+
+    thread distribution tree
+
+
+
+
+
+
+
+TcpServer
+
+    Acceptor   TcpConnection
+
